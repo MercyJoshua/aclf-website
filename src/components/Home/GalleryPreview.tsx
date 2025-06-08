@@ -46,7 +46,7 @@ const GalleryPreview = () => {
 
         <div className="mt-10">
           <Link
-            to="/"
+            to="/Gallery"
             className="inline-block text-white bg-secondary px-6 py-2 rounded-full font-medium hover:bg-primary transition"
           >
             View Full Gallery

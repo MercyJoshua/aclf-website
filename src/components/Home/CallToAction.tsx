@@ -15,7 +15,7 @@ const CallToAction = () => (
         Become a part of our mission — whether you’re a parent, volunteer, or educator, there’s a place for you.
       </p>
       <Link
-        to="/volunteer"
+        to="/Contact"
         className="bg-secondary hover:bg-white hover:text-primary text-white font-medium px-6 py-3 rounded-full transition"
       >
         Get Involved
