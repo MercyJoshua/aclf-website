@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-// import logo from "../../assets/logo.png";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -11,13 +11,12 @@ const navItems = [
   { name: "Contact", path: "/Contact" },
 ];
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full py-4 px-6 mx-auto flex justify-between items-center border-b dark:border-primary bg-light dark:bg-dark transition-colors duration-300 z-50">
-      {/* Logo Section */}
+    <nav className="w-full py-4 px-6 mx-auto flex justify-between items-center border-b dark:border-primary bg-light dark:bg-dark transition-colors duration-300 z-50 relative">
+      {/* Logo */}
       <motion.div
         className="flex items-center space-x-2"
         initial={{ opacity: 0, x: -30 }}
@@ -26,18 +25,18 @@ const Navbar = () => {
         viewport={{ once: false }}
       >
         <Link to="/">
-          {/* <img src='' alt="ACLF Logo" className="w-10 h-10 object-contain" /> */}
           <motion.h1
             className="text-xl font-bold text-primary dark:text-primary"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            viewport={{ once: false }}
           >
             ACLF
           </motion.h1>
-          </Link>
-          </motion.div>
+        </Link>
+      </motion.div>
+
+      {/* Desktop Nav */}
       <ul className="hidden md:flex gap-6 text-base font-semibold">
         {navItems.map((item, index) => (
           <motion.li
@@ -46,25 +45,37 @@ const Navbar = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
-            viewport={{ once: false }}
           >
-            <Link to={item.path} className=" text-primary hover:text-secondary dark:text-primary transition-colors">{item.name}</Link>
+            <Link
+              to={item.path}
+              className="text-primary hover:text-secondary dark:text-primary transition-colors"
+            >
+              {item.name}
+            </Link>
           </motion.li>
         ))}
       </ul>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      {/* Mobile Menu Toggle */}
+      <div className="md:hidden z-50">
         <button
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="text-primary focus:outline-none"
-          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-primary dark:text-light text-2xl"
         >
-          {menuOpen ? "Close" : "Menu"}
+          {menuOpen ? <FiX /> : <FiMenu />}
         </button>
-        {/* Mobile Nav */}
+      </div>
+
+      {/* Mobile Menu Panel */}
+      <AnimatePresence>
         {menuOpen && (
-          <ul className="absolute top-16 left-0 w-full bg-light dark:bg-dark shadow-md flex flex-col items-center gap-4 py-4 z-50 transition-all">
+          <motion.ul
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full left-0 w-full bg-light dark:bg-dark shadow-md flex flex-col items-center gap-4 py-6 md:hidden"
+          >
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -76,10 +87,9 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         )}
-      </div>
-
+      </AnimatePresence>
     </nav>
   );
 };
