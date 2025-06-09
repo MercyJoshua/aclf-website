@@ -11,7 +11,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <BrowserRouter>
-      <div className="w-screen min-h-screen overflow-x-hidden">
+      <div className=" overflow-x-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

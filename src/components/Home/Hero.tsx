@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -32,9 +33,13 @@ const Hero = () => {
                 <p className="text-base sm:text-lg text-secondary mb-6">
                     Inspiring purpose, building confidence, and nurturing leadership in children across Africa.
                 </p>
-                <button className="px-6 py-3 rounded-full bg-primary text-light font-semibold hover:bg-secondary transition-colors">
-                    Explore Our Work
-                </button>
+               
+                 <Link
+                            to="/Program"
+className="px-6 py-3 rounded-full bg-primary text-light font-semibold hover:bg-secondary transition-colors"
+                          >
+                           Explore Our Work
+                          </Link>
             </motion.div>
         </section>
     );
