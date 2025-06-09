@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import DonateButton from "../common/DonateButton";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -13,6 +14,8 @@ const navItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const donationUrl = import.meta.env.VITE_DONATION_URL;
+
 
   return (
     <nav className="w-full py-4 px-6 mx-auto flex justify-between items-center border-b dark:border-primary bg-light dark:bg-dark transition-colors duration-300 z-50 relative">
@@ -22,7 +25,6 @@ const Navbar = () => {
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
-        viewport={{ once: false }}
       >
         <Link to="/">
           <motion.h1
@@ -37,7 +39,7 @@ const Navbar = () => {
       </motion.div>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex gap-6 text-base font-semibold">
+      <ul className="hidden md:flex gap-6 items-center text-base font-semibold">
         {navItems.map((item, index) => (
           <motion.li
             key={item.name}
@@ -54,6 +56,18 @@ const Navbar = () => {
             </Link>
           </motion.li>
         ))}
+
+        {/* Donate Button */}
+        <motion.li
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+        >
+       <DonateButton className="hidden md:block" />
+
+
+        </motion.li>
       </ul>
 
       {/* Mobile Menu Toggle */}
@@ -87,6 +101,12 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+
+            {/* Donate Button - Mobile */}
+           <li>
+  <DonateButton className="w-full text-center" />
+</li>
+
           </motion.ul>
         )}
       </AnimatePresence>
