@@ -1,4 +1,3 @@
-import React from "react";
 
 const DonateButton = ({ className = "" }: { className?: string }) => {
   const donationUrl = import.meta.env.VITE_DONATION_URL;

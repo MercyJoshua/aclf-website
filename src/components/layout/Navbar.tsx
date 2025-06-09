@@ -14,7 +14,7 @@ const navItems = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const donationUrl = import.meta.env.VITE_DONATION_URL;
+
 
 
   return (
