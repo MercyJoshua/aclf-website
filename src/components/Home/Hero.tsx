@@ -28,10 +28,10 @@ const Hero = () => {
                 className="max-w-xl flex flex-col items-center md:items-start"
             >
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
-                    Shaping Young African Leaders
+                    African Child Leadership Foundation(ACLiF)
                 </h1>
                 <p className="text-base sm:text-lg text-secondary mb-6">
-                    Inspiring purpose, building confidence, and nurturing leadership in children across Africa.
+                    Building A Sustainable Future, One Child At A Time
                 </p>
                
                  <Link
