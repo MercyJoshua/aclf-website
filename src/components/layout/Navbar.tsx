@@ -63,7 +63,7 @@ const Navbar = () => {
 
               {/* Dropdown */}
               <ul className="absolute left-0 top-full mt-2 hidden group-hover:flex flex-col bg-white dark:bg-dark shadow-lg rounded-md py-2 w-56 z-50">
-                {item.items.map((subItem, subIndex) => (
+                {item.items.map((subItem, _subIndex) => (
                   <Link
                     key={subItem.name}
                     to={subItem.path}
