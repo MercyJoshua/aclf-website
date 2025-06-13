@@ -13,7 +13,7 @@ const Hero = () => {
             >
                 <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-full shadow-lg mx-auto border-2 border-primary">
                     <img
-                        src="/assets/hero-bg.png"
+                        src="/assets/hero-alt.jpeg"
                         alt="Children in Africa"
                         className="object-cover w-full h-full"
                     />

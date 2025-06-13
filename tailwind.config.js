@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#5c216e',
-        secondary: '#b6127e',
+        primary: '#6c2c8d',
+        secondary: '#db2487',
         light: '#fffbff',
         dark: '#1f1f1f', 
       },
     },
     keyframes: {
         'pulse-glow': {
-          '0%, 100%': { boxShadow: '0 0 15px #b6127e' },
+          '0%, 100%': { boxShadow: '0 0 15px #ab278a' },
           '50%': { boxShadow: '0 0 25px #b6127e' },
         },
       },

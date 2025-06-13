@@ -7,55 +7,90 @@ import DonateButton from "../common/DonateButton";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/About" },
-  { name: "Programs", path: "/Program" },
+  {
+    name: "Programs",
+    dropdown: true,
+    items: [
+      { name: "KidLeaders Fun Lab", path: "/programs/kidleaders-fun-lab" },
+      { name: "Project Think4Impact", path: "/programs/project-think4impact" },
+      { name: "Dream. Lead. Innovate.", path: "/programs/dream-lead-innovate" },
+      { name: "Advocacy Campaigns", path: "/programs/advocacy-campaigns" },
+    ],
+  },
   { name: "Gallery", path: "/Gallery" },
   { name: "Contact", path: "/Contact" },
 ];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-
+  const [programDropdownOpen, setProgramDropdownOpen] = useState(false);
 
   return (
     <nav className="w-full py-4 px-6 mx-auto flex justify-between items-center border-b dark:border-primary bg-light dark:bg-dark transition-colors duration-300 z-50 relative">
       {/* Logo */}
       <motion.div
-        className="flex items-center space-x-2"
+        className="flex items-center"
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <Link to="/">
-          <motion.h1
-            className="text-xl font-bold text-primary dark:text-primary"
+        <Link to="/" className="block">
+          <motion.img
+            src="/assets/ACLF-logo.png"
+            alt="Children in Africa"
+            className="object-contain w-20 h-15"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            ACLF
-          </motion.h1>
+          />
         </Link>
       </motion.div>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex gap-6 items-center text-base font-semibold">
-        {navItems.map((item, index) => (
-          <motion.li
-            key={item.name}
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Link
-              to={item.path}
-              className="text-primary hover:text-secondary dark:text-primary transition-colors"
+      <ul className="hidden md:flex gap-6 items-center text-base font-semibold relative">
+        {navItems.map((item, index) =>
+          item.dropdown ? (
+            <motion.li
+              key={item.name}
+              className="relative group"
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
             >
-              {item.name}
-            </Link>
-          </motion.li>
-        ))}
+              <span className="cursor-pointer text-primary hover:text-secondary dark:text-primary transition-colors">
+                {item.name}
+              </span>
+
+              {/* Dropdown */}
+              <ul className="absolute left-0 top-full mt-2 hidden group-hover:flex flex-col bg-white dark:bg-dark shadow-lg rounded-md py-2 w-56 z-50">
+                {item.items.map((subItem, _subIndex) => (
+                  <Link
+                    key={subItem.name}
+                    to={subItem.path}
+                    className="px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 text-primary dark:text-light transition-colors"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </ul>
+            </motion.li>
+          ) : (
+            <motion.li
+              key={item.name}
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <Link
+                to={item.path ?? "#"}
+                className="text-primary hover:text-secondary dark:text-primary transition-colors"
+              >
+                {item.name}
+              </Link>
+            </motion.li>
+          )
+        )}
 
         {/* Donate Button */}
         <motion.li
@@ -64,9 +99,7 @@ const Navbar = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           whileHover={{ scale: 1.05 }}
         >
-       <DonateButton className="hidden md:block" />
-
-
+          <DonateButton className="hidden md:block" />
         </motion.li>
       </ul>
 
@@ -90,23 +123,50 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-light dark:bg-dark shadow-md flex flex-col items-center gap-4 py-6 md:hidden"
           >
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  className="block text-primary hover:text-secondary dark:text-primary transition-colors text-lg font-semibold"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) =>
+              item.dropdown ? (
+                <li key={item.name} className="w-full text-center">
+                  <button
+                    onClick={() => setProgramDropdownOpen(!programDropdownOpen)}
+                    className="text-primary dark:text-primary font-semibold"
+                  >
+                    {item.name}
+                  </button>
+
+                  {/* Dropdown list */}
+                  {programDropdownOpen && (
+                    <ul className="mt-2 space-y-2">
+                      {item.items.map((subItem) => (
+                        <li key={subItem.name}>
+                          <Link
+                            to={subItem.path}
+                            className="block text-sm text-primary hover:text-secondary dark:text-light"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ) : (
+                <li key={item.name}>
+                  <Link
+                      to={item.path ?? "#"}
+                    className="block text-primary hover:text-secondary dark:text-primary transition-colors text-lg font-semibold"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              )
+            )}
 
             {/* Donate Button - Mobile */}
-           <li>
-  <DonateButton className="w-full text-center" />
-</li>
-
+            <li>
+              <DonateButton className="w-full text-center" />
+            </li>
           </motion.ul>
         )}
       </AnimatePresence>
