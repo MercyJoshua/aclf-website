@@ -38,7 +38,7 @@ const Footer = () => {
           <motion.img
             src="/assets/ACLF-logo.png"
             alt="Children in Africa"
-            className="object-contain w-20 h-15 mb-5"
+            className="object-contain w-40 h-20 md:w-36 md:h-24"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
