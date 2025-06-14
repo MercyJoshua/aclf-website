@@ -4,12 +4,12 @@ const partners = [
   {
     name: "Super Woman",
     logo: "/partners/super-woman.avif",
-    website: "",
+    website: "https://superwomanorg.online",
   },
   {
     name: "Universal Basic Education",
     logo: "/partners/ube.png",
-    website: "https://companyb.com",
+    website: "https://ubec.gov.ng",
   },
   {
     name: "Boxit Africa",
@@ -19,7 +19,7 @@ const partners = [
   {
     name: "Elegant Print",
     logo: "/partners/elegant-print.png",
-    website: "",
+    website: "https://elegantprinttech.blogspot.com",
   },
 ];
 

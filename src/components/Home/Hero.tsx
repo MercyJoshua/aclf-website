@@ -2,47 +2,38 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-    return (
-        <section className="min-h-screen px-4 sm:px-6 py-12 sm:py-16 w-full flex flex-col md:flex-row justify-center items-center text-center md:text-left bg-light dark:bg-dark transition-colors duration-500">
-            <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6 }}
-                className="mb-8 md:mb-0 md:mr-12 flex justify-center"
-            >
-                <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-full shadow-lg mx-auto border-2 border-primary">
-                    <img
-                        src="/assets/hero-alt.jpeg"
-                        alt="Children in Africa"
-                        className="object-cover w-full h-full"
-                    />
-                </div>
-            </motion.div>
+  return (
+    <section
+      className="relative min-h-screen w-full flex items-center justify-center px-6 py-16 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/assets/hero-alt.jpeg')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
 
-            <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: false }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="max-w-xl flex flex-col items-center md:items-start"
-            >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
-                    African Child Leadership Foundation(ACLiF)
-                </h1>
-                <p className="text-base sm:text-lg text-secondary mb-6">
-                    Building A Sustainable Future, One Child At A Time
-                </p>
-               
-                 <Link
-                            to="/Program"
-className="px-6 py-3 rounded-full bg-primary text-light font-semibold hover:bg-secondary transition-colors"
-                          >
-                           Explore Our Work
-                          </Link>
-            </motion.div>
-        </section>
-    );
+      {/* Content */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 text-center md:text-left max-w-4xl"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-light mb-6 leading-tight drop-shadow-lg">
+          African Child Leadership Foundation (ACLiF)
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl text-secondary font-medium mb-8 drop-shadow-md">
+          Building A Sustainable Future, One Child At A Time
+        </p>
+
+        <Link
+          to="/Program"
+          className="inline-block px-8 py-4 rounded-full bg-primary text-light font-semibold text-lg hover:bg-secondary hover:text-light ttransition-colors"
+        >
+          Explore Our Work
+        </Link>
+      </motion.div>
+    </section>
+  );
 };
 
 export default Hero;

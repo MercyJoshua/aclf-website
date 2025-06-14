@@ -34,7 +34,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
-            className="text-md leading-relaxed text-zinc-700 md:text-lg"
+            className="text-md leading-relaxed text-zinc-700 md:text-lg dark:text-zinc-300"
           >
             We Are Committed To Building A Foundation That Serves As A Springboard For Raising Revolutionary Leaders Equipped To Drive Positive Change In Africa And Beyond
 
