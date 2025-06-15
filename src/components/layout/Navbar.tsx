@@ -14,9 +14,9 @@ const navItems = [
       { name: "KidLeaders Fun Lab", path: "/programs/kidleaders-fun-lab" },
       { name: "Project Think4Impact", path: "/programs/project-think4impact" },
       { name: "Dream. Lead. Innovate.", path: "/programs/dream-lead-innovate" },
-      { name: "Advocacy Campaigns", path: "/programs/advocacy-campaigns" },
     ],
   },
+  { name: "Advocacy Campaigns", path: "/advocacy-campaigns" },
   { name: "Gallery", path: "/Gallery" },
   { name: "Contact", path: "/Contact" },
 ];
