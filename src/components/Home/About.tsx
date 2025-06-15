@@ -9,13 +9,13 @@ const About = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: false }}
-          className="w-full md:w-1/2 flex justify-center items-center h-72 md:h-auto"
+          className="w-full md:w-1/2 flex justify-center items-center md:h-auto"
           style={{ minHeight: "18rem" }}
         >
           <img
             src="/assets/Student.jpg"
             alt="About ACLiF"
-            className="rounded-lg shadow-lg object-cover w-full h-full max-h-72 md:max-h-none"
+            className="rounded-lg shadow-md object-contain w-full h-98 md:max-h-none"
             style={{ aspectRatio: "1/1" }}
           />
         </motion.div>
