@@ -8,19 +8,19 @@ const cards = [
     title: "Our Mission",
     icon: <FaBullseye size={28} className="text-secondary" />,
     description:
-      "To raise confident, ethical, and visionary young leaders by nurturing their potential through transformative programs and support systems.",
+      "To Build And Equip High-potential African Children, youths, and girls For Future Leadership Through  Training, Project/ Play-based Learning, And Advocating for a world that supports their Holistic development",
   },
   {
     title: "Our Vision",
     icon: <FaEye size={28} className="text-secondary" />,
     description:
-      "A continent where every child is empowered with leadership, character, and creativity to influence their world positively.",
+      "We Are Committed to Building Future Generations of Impact-driven, Socially Responsible And Innovative African Leaders In Their Formative Years.",
   },
   {
-    title: "Our Core Values",
+    title: "Our Core Pillars",
     icon: <FaHeart size={28} className="text-secondary" />,
     description:
-      "Integrity, Compassion, Curiosity, Excellence, and Service are the values that guide everything we do.",
+      "Transformational Leadership & Education, Design Thinking & Innovation, Mindset Reprogramming, Inclusive Empowerment, Community Impact, Sustainable Development",
   },
 ];
 
@@ -28,7 +28,7 @@ const MissionVision = () => {
   return (
     <section className="w-full py-16 px-6 bg-white dark:bg-zinc-900 transition-colors">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-10">Mission, Vision & Core Values</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-10">Mission, Vision & Core Pillars</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((card, index) => (
