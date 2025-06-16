@@ -12,7 +12,7 @@ const Intro = () => {
         className="max-w-5xl mx-auto text-center"
       >
         <h1 className="text-2xl md:text-4xl font-bold text-primary mb-4">
-          About
+          ABOUT
         </h1>
         <p className="text-md md:text-lg text-zinc-700 dark:text-zinc-300 max-w-3xl mx-auto">
           

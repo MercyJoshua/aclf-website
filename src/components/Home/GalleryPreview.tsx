@@ -23,12 +23,10 @@ const GalleryPreview = () => {
         transition={{ duration: 0.8 }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Meet some of our happy faces</h2>
-        <p className="text-zinc-600 dark:text-zinc-300 mb-10">
-          Moments from our programs and events.
-        </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Meet Some Of Our Happy Faces</h2>
+       
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {gallery.map((img, i) => (
             <motion.div
               key={img}

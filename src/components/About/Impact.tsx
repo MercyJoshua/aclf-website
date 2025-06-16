@@ -10,10 +10,11 @@ type Metric = {
 };
 
 const metrics: Metric[] = [
-  { label: "Children Trained", target: 1200, suffix: "+" },
-  { label: "Leadership Events", target: 35, suffix: "+" },
-  { label: "Volunteers Engaged", target: 150, suffix: "+" },
-  { label: "Parents Reached", target: 400, suffix: "+" },
+  { label: "Children and Girls Trained", target: 400, suffix: "+" },
+  { label: "Mentees", target: 50, suffix: "+" },
+  { label: "People reached through Advocacy Campaigns", target: 1000, suffix: "+" },
+  { label: "Volunteers", target: 50, suffix: "+" },
+  { label: "African Countries", target: 4, suffix: "+" },
 ];
 
 const Counter = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
@@ -54,7 +55,7 @@ const Impact = () => {
           Our Impact
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {metrics.map((metric, index) => (
             <motion.div
               key={metric.label}
