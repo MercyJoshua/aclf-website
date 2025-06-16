@@ -28,7 +28,7 @@ const GalleryPreview = () => {
           Moments from our programs and events.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {gallery.map((img, i) => (
             <motion.div
               key={img}
