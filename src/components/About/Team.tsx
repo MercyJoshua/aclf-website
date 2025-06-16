@@ -2,24 +2,99 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Grace U.",
+    name: "Tiffany Ediomo",
     role: "Executive Director",
-    image: "/team/7.png", 
+    image: "/team/tiffany.avif", 
   },
   {
-    name: "David O.",
-    role: "Media/Publicity Lead",
-    image: "/team/10.png", 
+    name: "Oluwanifemi E.",
+    role: "Head of Operations",
+    image: "/team/nifemi.avif", 
   },
   {
-    name: "Amaka T.",
-    role: "Advocacy Team Coordinator",
-    image: "/team/9.png", 
+    name: "Temitope A.",
+    role: "Administration",
+    image: "/team/temitope.avif", 
   },
   {
-    name: "Chinedu A.",
-    role: "Programs Manager",
-    image: "/team/12.png",
+    name: "Wealth Iyaye",
+    role: "Financial Secretary",
+    image: "/team/wealth.avif",
+  },
+  {
+    name: "Pst. Francis Ige",
+    role: "Head Intercessor",
+    image: "/team/Ige.avif",
+  },
+  {
+    name: "Mkpouto-Abasi J.",
+    role: "Operations Team",
+    image: "/team/abasi.avif",
+  },
+  {
+    name: "Ssengooba Yunusu",
+    role: "Representative in Uganda",
+    image: "/team/Yunusu.avif",
+  },
+  {
+    name: "Dr. Vera Ake",
+    role: "Coordinator Project Think4Impact, Africa",
+    image: "/team/vera.avif",
+  },
+  {
+    name: "Simalui Kilusu",
+    role: "Representative in Kenya",
+    image: "/team/kilusu.avif",
+  },
+  {
+    name: "Stephen O.",
+    role: "Team Lead, Advocacy",
+    image: "/team/stephen.avif",
+  },
+  {
+    name: "Amaobong Basseyimalui",
+    role: "Coordinator, Advocacy Dept",
+    image: "/team/aob.avif",
+  },
+  {
+    name: "Barr. Chinenye Okeke",
+    role: "Marketing Officer",
+    image: "/team/okeke.avif",
+  },
+  {
+    name: "Monday Jerry",
+    role: "Head Of Media",
+    image: "/team/jerry.avif",
+  },
+  {
+    name: "Barr. Majesty Yibari",
+    role: "Media",
+    image: "/team/yibari.avif",
+  },
+  {
+    name: "Esther Adewale",
+    role: "Media",
+    image: "/team/esther.avif",
+  },
+  {
+    name: "Victor Francis",
+    role: "Branding",
+    image: "/team/francis.avif",
+  },
+  {
+    name: "Jahwin James",
+    role: "Branding",
+    image: "/team/james.avif",
+  },
+  {
+    name: "Barr. Uyo-Obong J.",
+    role: "Media",
+    image: "/team/obong.avif",
+  },
+  {
+    name: "Patience Maria",
+    role: "Media",
+    image: "/team/maria.avif",
   },
 ];
 
