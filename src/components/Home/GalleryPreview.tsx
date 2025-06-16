@@ -2,12 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const gallery = [
-  "/gallery/1.png",
-  "/gallery/2.png",
-  "/gallery/3.png",
-  "/gallery/4.png",
-  "/gallery/5.png",
-  "/gallery/6.png",
+  "/gallery/1.jpg",
+  "/gallery/2.jpg",
+  "/gallery/3.jpg",
+  "/gallery/4.jpg",
+  "/gallery/5.jpg",
+  "/gallery/6.jpg",
+  "/gallery/7.jpg",
+  "/gallery/8.jpg",
+  
 ];
 
 const GalleryPreview = () => {
@@ -20,9 +23,9 @@ const GalleryPreview = () => {
         transition={{ duration: 0.8 }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Gallery</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Meet some of our happy faces</h2>
         <p className="text-zinc-600 dark:text-zinc-300 mb-10">
-          Moments from our recent programs and events.
+          Moments from our programs and events.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

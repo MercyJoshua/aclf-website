@@ -14,9 +14,10 @@ const Story = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Story</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">WHAT WE BELIEVE
+</h2>
           <p className="text-zinc-700 dark:text-zinc-300 text-sm md:text-lg leading-relaxed">
-            African Child Leadership Foundation (ACLF) was founded with a deep passion for nurturing future leaders from a young age. It began as a simple idea — to create a space where children could be seen, heard, and guided with intention. From holding small community sessions to now organizing full-scale leadership conferences and talk shows, ACLF has remained rooted in its mission to shape tomorrow’s trailblazers today.
+            We believe sustainable development starts with children. They are not just the future—they are the foundation. Leadership does not begin in adulthood; it’s shaped in childhood through the right guidance, tools, and experiences. That’s why we design practical, age-appropriate programs that teach children empathy, innovation, and problem-solving—skills they need to grow into responsible, impact-driven leaders. When we invest early, we don’t just change a child’s life, we transform the future of communities.
           </p>
         </motion.div>
 
@@ -29,7 +30,7 @@ const Story = () => {
           viewport={{ once: false }}
         >
           <img
-            src="/gallery/2.png" 
+            src="/gallery/8.jpg" 
             alt="ACLF Story"
             className="rounded-2xl shadow-md w-full object-cover max-h-[400px]"
           />
