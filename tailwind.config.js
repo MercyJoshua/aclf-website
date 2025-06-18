@@ -6,12 +6,16 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
+           colors: {
         primary: '#6c2c8d',
         secondary: '#db2487',
         light: '#fffbff',
         dark: '#1f1f1f', 
+        accent1: '#a944b4',
+        accent2: '#c0629c',
+        accent3: '#e27ac2',
       },
+
     },
     keyframes: {
         'pulse-glow': {

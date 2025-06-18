@@ -11,7 +11,7 @@ const navItems = [
     name: "Programs",
     dropdown: true,
     items: [
-      { name: "KidLeaders Fun Lab", path: "/programs/kidleaders-fun-lab" },
+      { name: "KidLeaders Fun Lab", path: "/Kidleaders" },
       { name: "Project Think4Impact", path: "/programs/project-think4impact" },
       { name: "Dream. Lead. Innovate.", path: "/programs/dream-lead-innovate" },
     ],
@@ -52,7 +52,9 @@ const Navbar = () => {
           item.dropdown ? (
             <motion.li
               key={item.name}
-              className="relative group"
+              className="relative"
+              onMouseEnter={() => setProgramDropdownOpen(true)}
+              onMouseLeave={() => setProgramDropdownOpen(false)}
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
@@ -62,17 +64,27 @@ const Navbar = () => {
               </span>
 
               {/* Dropdown */}
-              <ul className="absolute left-0 top-full mt-2 hidden group-hover:flex flex-col bg-white dark:bg-dark shadow-lg rounded-md py-2 w-56 z-50">
-                {item.items.map((subItem, _subIndex) => (
-                  <Link
-                    key={subItem.name}
-                    to={subItem.path}
-                    className="px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 text-primary dark:text-light transition-colors"
+              <AnimatePresence>
+                {programDropdownOpen && (
+                  <motion.ul
+                    className="absolute left-0 top-full mt-2 flex flex-col bg-white dark:bg-dark shadow-lg rounded-md py-2 w-56 z-50"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
                   >
-                    {subItem.name}
-                  </Link>
-                ))}
-              </ul>
+                    {item.items.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.path}
+                        className="px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-800 text-primary dark:text-light transition-colors"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
             </motion.li>
           ) : (
             <motion.li
@@ -153,7 +165,7 @@ const Navbar = () => {
               ) : (
                 <li key={item.name}>
                   <Link
-                      to={item.path ?? "#"}
+                    to={item.path ?? "#"}
                     className="block text-primary hover:text-secondary dark:text-primary transition-colors text-lg font-semibold"
                     onClick={() => setMenuOpen(false)}
                   >

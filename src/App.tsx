@@ -7,6 +7,7 @@ import About from './pages/About';
 import Programs from './pages/Program';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import KidLeaders from './pages/Kidleaders';
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Program" element={<Programs />} />
+            {/* Programs */}
+        <Route path="/Kidleaders" element={<KidLeaders />} />
+        {/* TODO: Add these when you create them */}
+        {/* <Route path="/programs/project-think4impact" element={<ProjectThink4Impact />} /> */}
+        {/* <Route path="/programs/dream-lead-innovate" element={<DreamLeadInnovate />} /> */}
+
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
