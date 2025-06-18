@@ -2,14 +2,7 @@ import { kidleadersContent } from "../../../data/kidleaders";
 import { motion } from "framer-motion";
 
 const glowColors = [
-  "#6c2c8d", // primary
-  "#db2487", // secondary
-  "#fbb040", // yellow/orange
-  "#8dc63f", // green
-  "#00a79d", // teal
-  "#ffd700", // gold
-  "#ff69b4", // hot pink
-  "#40e0d0", // turquoise
+  "#6c2c8d", // turquoise
 ];
 
 const WhyLeadershipMatters = () => {
@@ -26,10 +19,10 @@ const WhyLeadershipMatters = () => {
           return (
             <motion.div
               key={item}
-              className="text-base sm:text-lg font-semibold text-center rounded-lg px-4 py-2"
+              className="text-base sm:text-lg font-semibold text-left rounded-lg px-4 py-2"
               style={{
                 color,
-                textShadow: `0 0 6px ${color}`,
+               
               }}
               animate={{
                 textShadow: [

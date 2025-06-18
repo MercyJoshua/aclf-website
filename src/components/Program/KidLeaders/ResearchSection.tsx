@@ -18,7 +18,7 @@ const ResearchSection = () => {
       {paragraphs.map((text, i) => (
         <motion.p
           key={i}
-          className="text-base sm:text-lg leading-relaxed"
+          className="text-sm leading-relaxed text-justify"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: i * 0.2 }}
@@ -28,7 +28,7 @@ const ResearchSection = () => {
       ))}
 
       <motion.p
-        className="text-base sm:text-lg font-bold text-primary leading-relaxed"
+        className="text-sm font-bold text-primary text-justify leading-relaxed"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: paragraphs.length * 0.2 }}
