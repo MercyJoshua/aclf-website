@@ -119,7 +119,7 @@ const Navbar = () => {
       <div className="md:hidden z-50">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-primary dark:text-light text-2xl"
+          className="text-primary dark:text-primary text-2xl bg-dark"
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
