@@ -23,10 +23,10 @@ const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto text-justify">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-secondary text-center">{title}</h2>
           {body.map((para, i) => (
-            <p className="text-sm sm:text-base lg:text-lg xl:text-xl mt-8 sm:mt-12 leading-relaxed" key={i}>
+            <p className="text-sm sm:text-base  lg:text-lg xl:text-xl mt-8 sm:mt-12 leading-relaxed" key={i}>
               {para}
             </p>
           ))}
@@ -63,8 +63,8 @@ const AboutSection = () => {
 </div>
 
 
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl mt-8 sm:mt-12 leading-relaxed">{closing}</p>
+        <div className="max-w-5xl mx-auto ">
+          <p className="text-sm sm:text-base text-justify lg:text-lg xl:text-xl mt-8 sm:mt-12 leading-relaxed">{closing}</p>
         </div>
       </motion.div>
     </section>

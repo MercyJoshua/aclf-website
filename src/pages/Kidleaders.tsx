@@ -21,7 +21,7 @@ const KidLeaders = () => {
       </motion.h1>
 
       <motion.p
-        className="text-md md:text-xl mb-10 text-center text-light max-w-3xl mx-auto"
+        className="text-md md:text-xl mb-10 text-primary max-w-3xl text-justify mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
