@@ -1,9 +1,6 @@
 import { kidleadersContent } from "../../../data/kidleaders";
 import { motion } from "framer-motion";
 
-const glowColors = [
-  "#6c2c8d", // turquoise
-];
 
 const WhyLeadershipMatters = () => {
   const { heading, items } = kidleadersContent.leadershipMatters;
@@ -15,21 +12,12 @@ const WhyLeadershipMatters = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
         {items.map((item, index) => {
-          const color = glowColors[index % glowColors.length];
           return (
             <motion.div
               key={item}
-              className="text-base sm:text-lg font-semibold text-left rounded-lg px-4 py-2"
-              style={{
-                color,
-               
-              }}
+              className="text-base sm:text-lg font-semibold text-left light:text-secondary  rounded-lg px-4 py-2"
+             
               animate={{
-                textShadow: [
-                  `0 0 4px ${color}`,
-                  `0 0 10px ${color}`,
-                  `0 0 4px ${color}`,
-                ],
               }}
               transition={{
                 repeat: Infinity,
