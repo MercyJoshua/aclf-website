@@ -32,7 +32,7 @@ export const kidleadersContent = {
    bold: "Giving children access to leadership development before age 12 isn’t just helpful—it’s transformational."
 },
   leadershipMatters: {
-    heading: "Why Leadership Matters Now",
+    heading: "Why leadership matters Now",
     items: [
       "Make thoughtful decisions",
       "Solve problems with creativity",

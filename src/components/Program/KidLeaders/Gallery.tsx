@@ -2,7 +2,7 @@ import { kidleadersContent } from "../../../data/kidleaders";
 
 
 const Gallery = () => (
-  <section className="mt-16">
+  <section className="mt-16 px-6">
     <h2 className="text-2xl md:text-3xl font-semibold text-center text-secondary  mb-6">
       See Moments From our KidLeaders Fun Lab
     </h2>
