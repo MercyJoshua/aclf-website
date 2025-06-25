@@ -29,7 +29,7 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <img
-              src="/kidleaders/01.jpg" 
+              src="/kidleaders/12.jpg" 
               alt="KidLeaders Program"
               className="rounded-xl shadow-lg w-full max-w-4xl h-48 sm:h-64 md:h-80 lg:h-[22rem] object-cover"
             />
