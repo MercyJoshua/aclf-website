@@ -6,11 +6,7 @@ const WhyLeadershipMatters = () => {
 
   return (
     <section className="mt-12 px-4">
-      <h2 className="font-bold text-2xl sm:text-3xl text-secondary mb-6 text-center">
-        {heading}
-      </h2>
-
-      {/* Image Section */}
+        {/* Image Section */}
       <motion.div
         className="flex justify-center mb-8"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -23,6 +19,11 @@ const WhyLeadershipMatters = () => {
           className="w-full max-w-4xl h-48 sm:h-64 md:h-80 object-cover rounded-xl shadow-md"
         />
       </motion.div>
+      <h2 className="font-bold text-2xl sm:text-3xl text-secondary mb-6 text-center">
+        {heading}
+      </h2>
+
+    
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
         {items.map((item, index) => (

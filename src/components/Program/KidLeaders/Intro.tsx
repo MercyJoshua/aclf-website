@@ -10,18 +10,7 @@ const AboutSection = () => {
 
   return (
     <section className="relative mt-8 sm:mt-12 py-12 sm:py-16 lg:py-20 bg-light dark:bg-dark text-primary dark:text-light overflow-hidden">
-      <motion.div
-        className="w-full mx-auto px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="max-w-5xl mx-auto text-justify">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-secondary text-center">
-            {title}
-          </h2>
-
-          {/* Responsive Image */}
+        {/* Responsive Image */}
           <motion.div
             className="my-8 sm:my-10 flex justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -34,6 +23,18 @@ const AboutSection = () => {
               className="rounded-xl shadow-lg w-full max-w-4xl h-48 sm:h-64 md:h-80 lg:h-[22rem] object-cover"
             />
           </motion.div>
+      <motion.div
+        className="w-full mx-auto px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="max-w-5xl mx-auto text-justify">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-secondary text-center">
+            {title}
+          </h2>
+
+        
 
           {body.map((para, i) => (
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl mt-8 sm:mt-12 leading-relaxed" key={i}>
