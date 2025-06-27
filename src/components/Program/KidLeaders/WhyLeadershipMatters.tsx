@@ -2,10 +2,10 @@ import { kidleadersContent } from "../../../data/kidleaders";
 import { motion } from "framer-motion";
 
 const WhyLeadershipMatters = () => {
-  const { heading, items } = kidleadersContent.leadershipMatters;
+  const { heading, paragraph, items } = kidleadersContent.leadershipMatters;
 
   return (
-    <section className="mt-12 px-4">
+    <section className="mt-16 px-4 max-w-5xl mx-auto space-y-6">
         {/* Image Section */}
       <motion.div
         className="flex justify-center mb-8"
@@ -23,8 +23,20 @@ const WhyLeadershipMatters = () => {
         {heading}
       </h2>
 
-    
+     <motion.p
+          className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-justify"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5,}}
+        >{paragraph}</motion.p>
 
+<motion.h2
+  className="text-xl sm:text-lg font-semibold text-center text-primary mt-8 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5,}}
+>At KidLeaders Fun Lab, children learn to: 
+</motion.h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
         {items.map((item, index) => (
           <motion.div
