@@ -33,6 +33,9 @@ export const kidleadersContent = {
 },
   leadershipMatters: {
     heading: "Why Leadership Matters is Here",
+    paragraph: [
+      "Transformative Leadership is about thinking critically, working with others, and creating positive change. When children begin developing these skills early, they grow into emotionally intelligent, socially responsible, and confident individuals",
+    ],
     items: [
       "Make thoughtful decisions",
       "Solve problems with creativity",
