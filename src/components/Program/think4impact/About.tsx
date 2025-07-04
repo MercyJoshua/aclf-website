@@ -13,7 +13,7 @@ const AboutSection = () => {
       <div className="w-full md:w-1/2 flex justify-center items-stretch">
       <div className="relative w-full md:h-96 rounded-xl overflow-hidden shadow-md flex flex-col h-full">
         <img
-        src="/gallery/9.jpg" 
+        src="/think4impact/3.jpg" 
         alt="Project Think4Impact"
         className="w-full h-full object-cover"
         />

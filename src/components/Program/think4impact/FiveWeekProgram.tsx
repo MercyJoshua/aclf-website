@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const steps = [
-  { icon: "🔍", text: "See the Problem – What do I care about changing in my environment?" },
+  { icon: "🔍", text: "See the Problem – What needs to change in my community? What SDG can I contribute to?" },
   { icon: "💚", text: "Understand People – Who is affected? What do they feel and need?" },
   { icon: "🧪", text: "Think of Ideas – What can we do with what we have?" },
   { icon: "🧩", text: "Test It Out – Let’s execute a community project with our solution." },
