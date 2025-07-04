@@ -8,6 +8,7 @@ import Programs from './pages/Program';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import KidLeaders from './pages/Kidleaders';
+import ThinkForImpact from './pages/project-think4impact';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             {/* Programs */}
         <Route path="/Kidleaders" element={<KidLeaders />} />
         {/* TODO: Add these when you create them */}
-        {/* <Route path="/programs/project-think4impact" element={<ProjectThink4Impact />} /> */}
+        <Route path="/project-think4impact" element={<ThinkForImpact />} />
         {/* <Route path="/programs/dream-lead-innovate" element={<DreamLeadInnovate />} /> */}
 
           <Route path="/Gallery" element={<Gallery />} />

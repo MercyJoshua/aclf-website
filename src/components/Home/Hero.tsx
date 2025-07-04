@@ -8,7 +8,7 @@ const Hero = () => {
       style={{ backgroundImage: "url('/assets/hero-alt.jpeg')" }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+      <div className="absolute inset-0 bg-dark bg-opacity-60 z-0" />
 
       {/* Content */}
       <motion.div
@@ -27,7 +27,7 @@ const Hero = () => {
 
         <Link
           to="/Program"
-          className="inline-block px-8 py-4 rounded-full bg-primary text-light font-semibold text-lg hover:bg-secondary hover:text-light ttransition-colors"
+          className="inline-block px-8 py-4 rounded-full bg-primary text-light font-semibold text-lg hover:bg-secondary hover:text-light transition-colors"
         >
           Explore Our Work
         </Link>
