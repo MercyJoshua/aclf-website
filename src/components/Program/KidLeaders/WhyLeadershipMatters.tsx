@@ -37,11 +37,11 @@ const WhyLeadershipMatters = () => {
           transition={{ duration: 0.5,}}
 >At KidLeaders Fun Lab, children learn to: 
 </motion.h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto list-none">
         {items.map((item, index) => (
-          <motion.div
+          <motion.li
             key={item}
-            className="text-base sm:text-lg font-semibold text-left dark:text-light rounded-lg px-4 py-2"
+            className="flex items-start gap-3 text-base sm:text-lg font-semibold text-left dark:text-light rounded-lg px-4 py-2"
             animate={{ opacity: [0.9, 1, 0.9] }}
             transition={{
               repeat: Infinity,
@@ -50,10 +50,16 @@ const WhyLeadershipMatters = () => {
               delay: (index % 3) * 0.5,
             }}
           >
+            {/* Example icon from react-icons */}
+            <span className="mt-1 text-primary">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M7.629 15.707a1 1 0 0 1-1.415 0l-4.243-4.243a1 1 0 1 1 1.415-1.415l3.536 3.535 7.778-7.778a1 1 0 1 1 1.415 1.415l-8.486 8.486z"/>
+              </svg>
+            </span>
             {item}
-          </motion.div>
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

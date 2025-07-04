@@ -12,7 +12,7 @@ const navItems = [
     dropdown: true,
     items: [
       { name: "KidLeaders Fun Lab", path: "/Kidleaders" },
-      { name: "Project Think4Impact", path: "/programs/project-think4impact" },
+      { name: "Project Think4Impact", path: "/project-think4impact" },
       { name: "Dream. Lead. Innovate.", path: "/programs/dream-lead-innovate" },
     ],
   },
