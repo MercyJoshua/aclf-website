@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 // Helper to split a paragraph into words for word-by-word animation
 const fadeInWords = (text: string) => {
-  return text.split(" ").map((word, i) => (
+  return text.split("''").map((word, i) => (
     <motion.span
       key={i}
       className="inline-block"
@@ -58,9 +58,9 @@ const ImpactfulSection = () => (
       })}
     </ul>
 
-    <p className="text-base sm:text-lg leading-relaxed text-justify">
+    <p className="text-base sm:text-lg text-justify text-secondary/60">
       {fadeInWords(
-        "Through this program, we are actively preparing young Africans for a life of civic responsibility, entrepreneurship, and community transformation."
+        "Through  this program, we are actively preparing young Africans for a life of civic responsibility, entrepreneurship, and community transformation."
       )}
     </p>
   </section>
