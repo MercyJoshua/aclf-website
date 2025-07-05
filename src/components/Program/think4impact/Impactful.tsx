@@ -34,12 +34,12 @@ const ImpactfulSection = () => (
     {/* Image above heading */}
     <div className="flex flex-col items-center space-y-4">
       <motion.img
-        src="/think4impact/5.jpg" // Replace with your image path
+        src="/assets/hero-alt.jpeg" 
         alt="Impactful Program"
-        className="w-full rounded-sm object-cover shadow-md h-32 sm:h-48 md:h-56 lg:h-64"
+        className="w-full rounded-sm object-cover shadow-md h-56 sm:h-48 md:h-56 lg:h-80"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.7 }}
       />
 
@@ -47,7 +47,7 @@ const ImpactfulSection = () => (
         className="text-2xl sm:text-3xl font-bold text-primary text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.7 }}
       >
         What Makes This Program Impactful?
@@ -63,7 +63,7 @@ const ImpactfulSection = () => (
             className="text-base sm:text-lg leading-relaxed text-justify flex"
             initial={{ opacity: 0, x: direction }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{
               duration: 0.6,
               delay: index * 0.2 + 0.3,

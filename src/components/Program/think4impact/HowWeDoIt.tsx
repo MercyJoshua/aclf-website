@@ -14,35 +14,30 @@ const HowWeDoItSection = () => {
         className="text-2xl sm:text-3xl font-bold text-primary text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
         transition={{ duration: 0.7 }}
       >
         🛠 How We Do It
       </motion.h3>
 
       {paragraphs.map((para, i) => {
-        const words = para.split(" ");
-        const direction = i % 2 === 0 ? -50 : 50; // Alternate left/right
+        const direction = i % 2 === 0 ? -30 : 30; // Alternate left/right slide
 
         return (
-          <p
+          <motion.p
             key={i}
-            className="text-base sm:text-lg leading-relaxed text-justify flex flex-wrap"
+            className="text-base sm:text-lg leading-relaxed text-justify text-gray-700 dark:text-gray-200"
+            initial={{ opacity: 0, x: direction }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{
+              duration: 0.8,
+              delay: i * 0.2,
+              ease: "easeOut",
+            }}
           >
-            {words.map((word, index) => (
-              <motion.span
-                key={index}
-                className="mr-1 inline-block"
-                initial={{ opacity: 0, x: direction }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.05 + i * 0.2, // Stagger each word & paragraph
-                }}
-              >
-                {word}
-              </motion.span>
-            ))}
-          </p>
+            {para}
+          </motion.p>
         );
       })}
     </section>
