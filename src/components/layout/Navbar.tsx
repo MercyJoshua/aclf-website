@@ -13,7 +13,7 @@ const navItems = [
     items: [
       { name: "KidLeaders Fun Lab", path: "/Kidleaders" },
       { name: "Project Think4Impact", path: "/project-think4impact" },
-      { name: "Dream. Lead. Innovate.", path: "/programs/dream-lead-innovate" },
+      { name: "Dream. Lead. Innovate.", path: "/dream-lead-innovate" },
     ],
   },
   { name: "Advocacy Campaigns", path: "/advocacy-campaigns" },
