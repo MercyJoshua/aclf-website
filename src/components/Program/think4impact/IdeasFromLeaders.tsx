@@ -104,13 +104,14 @@ const IdeasFromLeaders = () => {
           transition={{ delay: index * 0.2, duration: 0.7 }}
           viewport={{ once: false }}
         >
-          <div className="w-full lg:w-1/2">
-            <img
-              src={leader.image}
-              alt={leader.name}
-              className="w-full h-50 rounded-xl object-cover shadow-lg"
-            />
-          </div>
+       <div className="w-full lg:w-1/2 aspect-[4/3]">
+  <img
+    src={leader.image}
+    alt={leader.name}
+    className="object-cover w-full h-full rounded-xl shadow-lg"
+  />
+</div>
+
           <div className="w-full lg:w-1/2">
             <h3 className="text-xl font-bold mb-2 text-primary">
               {leader.name} <span className="text-gray-600">({leader.age})</span>
