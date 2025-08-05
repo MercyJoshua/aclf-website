@@ -80,56 +80,71 @@ She tackles Sustainable Development Goal 11 (Sustainable Cities and Communities)
     },
 ];
 
+
 const IdeasFromLeaders = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 sm:px-10 py-16 space-y-20">
-      <motion.h2
-        className="text-2xl sm:text-3xl font-bold text-primary text-center mb-10"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
+    <section className="max-w-4xl mt-10 mx-auto px-6 sm:px-10 py-12 rounded-md shadow-sm space-y-8">
+      {/* Header */}
+      <motion.div
+        className="text-center mb-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        Ideas From Our Young Leaders
-      </motion.h2>
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-primary mb-4">
+          Ideas from Our Young Leaders
+        </h2>
+        <p className="text-lg  max-w-2xl mx-auto">
+          Visionary projects by children passionate about change.
+        </p>
+      </motion.div>
 
-      {leaders.map((leader, index) => (
-        <motion.div
-          key={index}
-          className={`flex flex-col lg:flex-row ${
-            index % 2 === 1 ? "lg:flex-row-reverse" : ""
-          } items-center gap-8`}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2, duration: 0.7 }}
-          viewport={{ once: false }}
-        >
-       <div className="w-full lg:w-1/2 aspect-[4/3]">
-  <img
-    src={leader.image}
-    alt={leader.name}
-    className="object-cover w-full h-full rounded-xl shadow-lg"
-  />
-</div>
+      {/* Cards */}
+      <div className="space-y-20">
+        {leaders.map((leader, index) => (
+          <motion.div
+            key={index}
+            className="grid md:grid-cols-2 gap-8 items-start rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            {/* Text Side */}
+            <div>
+              <h3 className="text-2xl font-semibold  mb-1">
+                {leader.name}
+                <span className="ml-2 text-base ">({leader.age})</span>
+              </h3>
+              <p className="text-sm text-secondary font-medium mb-4">
+                Sustainable Development Advocate
+              </p>
 
-          <div className="w-full lg:w-1/2">
-            <h3 className="text-xl font-bold mb-2 text-primary">
-              {leader.name} <span className="text-gray-600">({leader.age})</span>
-            </h3>
-            <p className="text-gray-700 dark:text-slate-300 mb-4">
-              {leader.story}
-            </p>
-            {leader.bullets.length > 0 && (
-              <ul className="list-disc list-inside mb-4 text-gray-700 dark:text-slate-300 space-y-1">
-                {leader.bullets.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            )}
-            <p className="text-gray-700 dark:text-slate-300">{leader.conclusion}</p>
-          </div>
-        </motion.div>
-      ))}
+              <p className=" leading-relaxed mb-4 text-justify">
+                {leader.story}
+              </p>
+
+              {leader.bullets.length > 0 && (
+                <div className="rounded-lg p-4 border text-justify">
+                  <h4 className="font-semibold mb-2 text-primary">Key Initiatives:</h4>
+                  <ul className="list-disc list-inside text-sm  space-y-2">
+                    {leader.bullets.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Right Section: Conclusion */}
+            <div className="bg-primary/5 border-l-4 text-justify border-primary p-6 rounded-xl shadow-inner h-fit">
+              <p className="italic  leading-relaxed">
+                {leader.conclusion}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
