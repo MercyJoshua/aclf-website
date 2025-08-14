@@ -4,7 +4,7 @@ import CohortOne from "../components/Program/think4impact/CohortOne";
 import FiveWeekProgramSection from "../components/Program/think4impact/FiveWeekProgram";
 import Hero from "../components/Program/think4impact/Hero";
 import HowWeDoItSection from "../components/Program/think4impact/HowWeDoIt";
-import IdeasFromLeaders from "../components/Program/think4impact/IdeasFromLeaders";
+//import IdeasFromLeaders from "../components/Program/think4impact/IdeasFromLeaders";
 import ImpactfulSection from "../components/Program/think4impact/Impactful";
 import LeaderGallery from "../components/Program/think4impact/leaderGallery";
 import MissionSection from "../components/Program/think4impact/Mission";
@@ -26,7 +26,7 @@ const ThinkForImpact = () => {
       <ImpactfulSection />
       <CohortOne />
       <LeaderGallery />
-      <IdeasFromLeaders />
+   {/*    <IdeasFromLeaders /> */}
     </section>
   );
 };

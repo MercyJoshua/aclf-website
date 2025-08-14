@@ -28,7 +28,6 @@ const programs = [
 ];
 
 const TRUNCATE_LENGTH = 120;
-
 const Program = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
